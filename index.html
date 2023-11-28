@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="map.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header__superior">
+            <div class="logo">
+                <img src="UniMap.2.png" alt="">
+            </div>
+            <h4>"Explora con Tecnolog&iacute;a: Descubre Tu Camino en la Universidad Tecnol&oacute;gica a trav&eacute;s de Nuestro Mapa Interactivo." </h4>
+        </div>
+
+        <div class="cerrar_sesion">
+         <center><a href="login.php">Cerrar sesion</a></center>  
+        </div>
+
+        <div class="container__menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html" id="selected"></a></li>
+                    
+                    <li><a href="#">Servicios</a>
+                        <ul class="submenu1">
+                           <li class="actividad"><button id="button"><a href="#">Actividades Culturales y Deportivas</a></button>
+                            
+                        </li>  
+                            <li><a href="#beca">Becas</a>
+                            </li>
+                            <li><a href="#biblioteca">Biblioteca</a></li>
+                            <li><a href="#serviciosE">Servicios Escolares</a></li>
+                            <li><a href="#medico"> Servicio Medico</a></li>
+                            <li><a href="#toro"> Toro Shop</a></li>
+                            <li><a href="#unidad">Unidad de Apoyo Psicopedagogico</a></li>
+                            <li><a href="#idiomas">Centro de Idiomas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Edificios</a>
+                        <ul class="submenu">
+                            <li><a href="#edificioA">Edificio A</a></li>
+                            <li><a href="#edificioB">Edificio B</a></li>
+                            <li><a href="#edificioC">Edificio C</a></li>
+                            <li><a href="#edificioD">Edificio D </a></li>
+                            <li><a href="#edificioE">Edificio E</a></li>
+                            <li><a href="#edificioF">Edificio F</a></li>
+                            <li><a href="#edificioG">Edificio G</a></li>
+                            <li><a href="#edificioH">Edificio H</a></li>
+                            <li><a href="#edificioI">Edificio I</a></li>
+                            <li><a href="#edificioJ">Edificio J</a></li>
+                            <li><a href="#edificioK">Edificio K</a></li>
+                            <li><a href="#edificioL">Edificio L</a></li>
+                            <li><a href="#edificioM">Edificio M</a></li>
+                            <li><a href="#edificioN">Edificio N</a></li>
+                            <li><a href="#edificioO">Edificio O</a></li>
+                            <li><a href="#edificioQ">Edificio Q</a></li>
+                            <li><a href="#gimnasio">Gimnasio</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Direccion de carrera</a>
+                        <ul class="submenu2">
+                            <li><a href="#contaduria">Contaduria</a></li>
+                            <li><a href="#energias"> Energia Renovables</a></li>
+                            <li><a href="#innovacion">Innovacion de Negocios</a></li>
+                            <li><a href="#mecatronica">Mecatronica</a></li>
+                            <li><a href="#mercadotecnia">Mercadotecnia</a></li>
+                            <li><a href="#mantenimiento">Mantenimiento Industrial</a></li>
+                            <li><a href="#nanotecnologia"> Nanotecnologia</a></li>
+                            <li><a href="#proteccion"> Proteccion Civil</a></li>
+                            <li><a href="#procesos">Procesos y Operaciones industriales</a></li>
+                            <li><a href="#terapia"> Terapia Fisica</a></li>
+                            <li><a href="#tecnologias"> Tecnologias de la informacion</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Profesores</a>
+                      <ul class="submenu3">
+                        <li><a href="#trejo">Ricardo Trejo</a></li>
+                        <li><a href="#cristian">Cristian Mariano</a></li>
+                        <li><a href="#hector">Hector Ricarte</a></li>
+                        <li><a href="#rosa">Rosa Ortiz</a></li>
+                        <li><a href="#lozoya">Francisco Lozoya</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                    <li><a href="carrito_index.html">TIENDA</a></li>
+                    <li><a href="ayuda.html">AYUDA</a></li>
+                    <li><a href="conocenos.html">CONOCENOS</a></li>
+                </ul>  
+            </nav>
+           
+        </div>
+<div id="map-container">
+         <div id="map"></div>
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAebwbtddXSYWXq6z_NjeS_xc8Ef57uqtI&v=beta&libraries=marker&callback=initMap"></script>
+         <script src="https://use.fontawesome.com/releases/v6.2.0/js/all.js"></script>
+</div>
+    </header>
+    <div id="contenedorInterno"><button id="cerrarContenedorBtn">&#10006;</button>
+        <!-- Contenido de tu contenedor interno -->
+         <h2>Actividades culturales y deportivas</h2>
+        <h3>Horario</h3>
+        <p>10:00 am a 2:00 pm</p>
+        <h3>Ubicaci&oacute;n</h3>
+        <p>Vagon naranja al lado del edificio B</p>
+      </div>
+
+      <div id="contenedor_beca"><button id="cerrar_beca">&#10006;</button>
+        <!-- Contenido de tu contenedor interno -->
+      <h2>Becas</h2>
+        <h3>Horario</h3>
+        <p>9:00 am a 6:00 pm</p>
+        <h3>Ubicacion</h3>
+        <p>Planta baja</p>
+      </div>
+
+      <div id="contenedor_biblioteca"><button id="cerrar_biblioteca">&#10006;</button>
+        <!-- Contenido de tu contenedor interno -->
+      <h2>Biblioteca</h2>
+        <h3>Horario</h3>
+        <p>7:00 am a 9:30 pm</p>
+        <h3>Ubicacion</h3>
+        <p>Planta baja</p>
+      </div>
+
+      <div id="contenedor_servicios"><button id="cerrar_servicios">&#10006;</button>
+        <!-- Contenido de tu contenedor interno -->
+      <h2>Servicios Escolares</h2>
+        <h3>Horario</h3>
+        <p>9:00 am a 5:40 pm</p>
+        <p>Extensiones: 3930,3819 ,3927 </p>
+        <h3>Ubicacion</h3>
+        <p>Planta baja</p>
+      </div>
+
+      <div id="contenedor_medico"><button id="cerrar_medico">&#10006;</button>
+        <!-- Contenido de tu contenedor interno -->
+      <h2>Servicio Medico</h2>
+        <h3>Horario</h3>
+        <p>7:00 am a 9:30 pm</p>
+        <h3>Ubicacion</h3>
+        <p>Planta baja</p>
+      </div>
+
+      <div id="contenedor_toro"><button id="cerrar_toro">&#10006;</button>
+        <!-- Contenido de tu contenedor interno -->
+      <h2>Toro Shop</h2>
+        <h3>Horario</h3>
+        <p>9:00 am a 2:00 pm</p>
+        <h3>Ubicacion</h3>
+        <p>Planta baja</p>
+      </div>
+
+      <div id="contenedor_apoyo"><button id="cerrar_apoyo">&#10006;</button>
+        <!-- Contenido de tu contenedor interno -->
+      <h2>Unidad de Apoyo Psicopedagogico</h2>
+        <h3>Horario</h3>
+        <p>10:00 a.m. a 7:00 p.m.</p>
+      </div>
+
+      <div id="contenedor_centro"><button id="cerrar_centro">&#10006;</button>
+        <!-- Contenido de tu contenedor interno -->
+      <h2>Centro de idiomas</h2>
+        <h3>Horario</h3>
+        <p>9:00 a.m. a 3:00 p.m. y 5:00 p.m. a 8:00 p.m.</p>
+      </div>
+
+   <!--CONTENEDORES PARA DIRECCIONES DE CARRERA-->
+   <div id="contenedor_contaduria"><button id="cerrar_contaduria">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Contaduria</h2>
+    <h3>Horario</h3>
+    <p>10:00 a.m. a 7:00 p.m.</p>
+  </div>
+
+  <div id="contenedor_energias"><button id="cerrar_energias">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Energias Renovables</h2>
+    <h3>Horario</h3>
+    <p>10:00 a.m. a 7:00 p.m.</p>
+  </div>
+
+  <div id="contenedor_innovacion"><button id="cerrar_innovacion">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Innovacion de Negocios</h2>
+    <h3>Horario</h3>
+    <p>10:00 a.m. a 7:00 p.m.</p>
+  </div>
+
+  <div id="contenedor_mecatronica"><button id="cerrar_mecatronica">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Mecatronica</h2>
+    <h3>Horario</h3>
+    <p>10:00 a.m. a 7:00 p.m.</p>
+  </div>
+
+  <div id="contenedor_mercadotecnia"><button id="cerrar_mercadotecnia">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Mecatronica</h2>
+    <h3>Horario</h3>
+    <p>10:00 a.m. a 7:00 p.m.</p>
+  </div>
+
+  <div id="contenedor_mantenimiento"><button id="cerrar_mantenimiento">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Mantenimiento Industrial</h2>
+    <h3>Horario</h3>
+    <p>10:00 a.m. a 7:00 p.m.</p>
+  </div>
+
+  <div id="contenedor_nanotecnologia"><button id="cerrar_nanotecnologia">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Nanotecnologia</h2>
+    <h3>Horario</h3>
+    <p>10:00 a.m. a 7:00 p.m.</p>
+  </div>
+
+  <div id="contenedor_proteccion"><button id="cerrar_proteccion">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Proteccion Civil</h2>
+    <h3>Horario</h3>
+    <p>10:00 a.m. a 7:00 p.m.</p>
+  </div>
+
+  <div id="contenedor_procesos"><button id="cerrar_procesos">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Procesos y Operaciones industriales</h2>
+    <h3>Horario</h3>
+    <p>10:00 a.m. a 7:00 p.m.</p>
+  </div>
+
+  <div id="contenedor_terapia"><button id="cerrar_terapia">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Terapia Fisica</h2>
+    <h3>Horario</h3>
+    <p>10:00 a.m. a 7:00 p.m.</p>
+  </div>
+
+  <div id="contenedor_tecnologias"><button id="cerrar_tecnologias">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Tecnologias de la informacion</h2>
+    <h3>Horario</h3>
+    <p>10:00 a.m. a 7:00 p.m.</p>
+  </div>
+   <!-------------------------------------------->
+   <!--CONTENEDORES DE PROFESORES-->
+   <div id="contenedor_trejo"><button id="cerrar_trejo">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Ricardo Trejo</h2>
+ <p> Correo electronico:<a class="contact-link" href="mailto:ricardo_trejo@utcj.edu.mx">ricardo_trejo@utcj.edu.mx</a>.</p> 
+ <p>Ubicacion:Planta baja</p>
+  </div>
+
+  <div id="contenedor_cristian"><button id="cerrar_cristian">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Cristian Mariano</h2>
+ <p> Correo electronico:<a class="contact-link" href="mailto:cristian_mariano@utcj.edu.mx">cristian_mariano@utcj.edu.mx</a>.</p> 
+ <p>Ubicacion:Planta baja</p>
+  </div>
+
+  <div id="contenedor_hector"><button id="cerrar_hector">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Hector Emilio Ricarte Cano</h2>
+ <p> Correo electronico:<a class="contact-link" href="mailto:hector_ricarte@utcjedu.onmicrosoft.com">hector_ricarte@utcjedu.onmicrosoft.com</a>.</p> 
+ <p>Ubicacion:Planta baja</p>
+  </div>
+
+  <div id="contenedor_rosa"><button id="cerrar_rosa">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Rosa Ivonne Ortiz Enriquez</h2>
+ <p> Correo electronico:<a class="contact-link" href="mailto:rosa_ortiz@utcj.edu.mx">rosa_ortiz@utcj.edu.mx</a>.</p> 
+ <p>Telefono: 6490600 EXT. 3807</p>
+ <p>Ubicacion:Planta baja</p>
+  </div>
+
+  <div id="contenedor_lozoya"><button id="cerrar_lozoya">&#10006;</button>
+    <!-- Contenido de tu contenedor interno -->
+  <h2>Francisco Andr&eacute;s Lozoya P&eacute;rez</h2>
+ <p> Correo electronico:<a class="contact-link" href="mailto:francisco_lozoya@utcj.edu.mx">francisco_lozoya@utcj.edu.mx</a>.</p> 
+ <p>Telefono: (656) 649-0600, 649-0604, 649-06008 ext 3807</p>
+ <p>Ubicacion:Planta baja</p>
+  </div>
+   <!------------------------------------------------------->
+</body>
+</html>

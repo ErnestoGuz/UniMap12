@@ -1,0 +1,1031 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+    text-decoration: none;
+}
+
+
+#map{
+    height: 95%;
+    width: 100%;
+}
+html,
+#map-container {
+    position: relative;
+    height: calc(100vh - 80px); /* Resta la altura del menú */
+  }
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+
+/*HEADER SUPERIOR*/
+
+.header__superior{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0%;
+}
+
+.header__superior h4{
+ margin-right: 290px;
+}
+.cerrar_sesion{
+  width: 120px;
+  height: 35px;
+  transform: translateX(-60px);
+  float: right;
+  margin-top: -47px;
+  border: none;
+  border-radius: 25px;
+  background-color: #cac7c7;
+}
+.cerrar_sesion a{
+  color: #000;
+  margin-left: 17px;
+}
+.cerrar_sesion:hover a{
+  color: #fff;
+}
+.cerrar_sesion:hover{
+  background-color: #a1a798e1;
+}
+
+.logo img{
+    width: 90px;
+
+}
+
+/*BARRA MENU*/
+
+.container__menu{
+    max-height: 300px;
+    background: #2c8608;
+    padding: 0px 20px;
+}
+
+.submenu{
+    max-height: 150px; /* Ajusta esta altura máxima según tus necesidades */
+    overflow-y: auto;
+    padding: 0px 20px;
+    
+}
+
+
+.submenu2{
+    max-height: 150px; /* Ajusta esta altura máxima según tus necesidades */
+    overflow-y: auto;
+    padding: 0px 20px;
+    
+}
+
+.submenu3{
+  max-height: 150px; /* Ajusta esta altura máxima según tus necesidades */
+  overflow-y: auto;
+  padding: 0px 20px;
+}
+
+.submenu1{
+  max-height: 150px; /* Ajusta esta altura máxima según tus necesidades */
+  overflow-y: auto;
+  padding: 0px 20px;
+}
+
+/*
+.submenu2::-webkit-scrollbar {
+    display: none;
+}*/
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav{
+    height: 100%;
+    
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+
+nav  ul  li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+nav > ul > li:first-child > a{
+    background-image: url(casa_blanco.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 40px;
+}
+
+nav > ul > li:first-child:hover > a{
+    background-image: url(casa_blanco.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+nav > ul > li> a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    color:white;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+
+nav > ul > li> a:hover{
+    transform: scale(1.1);
+    background: #0cd805;
+    box-shadow: 0px 0px 10px 0px  rgba(0, 0,0, 0.5);
+}
+
+#selected{
+    transform: scale(1.1);
+    background-color: #0cd805;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0,0, 0.5);
+}
+
+/*SUBMENU*/
+
+nav ul li ul{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0,0, 0.5);
+    z-index: 10;
+    transition: all 300ms ease;
+    transform: translateY(-20px);
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+
+
+nav ul li ul li a{
+    display: block;
+    color: black;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover{
+    background: #0cd805;
+    color:#fff;
+    transform: scale(1.2);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0,0, 0.5);
+    
+}
+
+.submenu1::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid rgb(0, 0, 0);
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+/*CONTENEDORES INTERNOS PARA LOS SERVICIOS*/
+#contenedorInterno {
+    max-height: 250px;
+    max-width: 350px;
+    position: absolute;
+    top: 190px;
+    left: 930px;
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow: auto;
+  }
+
+  #contenedor_beca{
+    max-height: 250px;
+    max-width: 350px;
+    position: absolute;
+    top: 190px;
+    left: 930px;
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow: auto;
+  }
+
+  #contenedor_biblioteca{
+    max-height: 250px;
+    max-width: 350px;
+    position: absolute;
+    top: 190px;
+    left: 930px;
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow: auto;
+  }
+
+  #contenedor_servicios{
+    max-height: 250px;
+    max-width: 350px;
+    width: 330px;
+    position: absolute;
+    top: 190px;
+    left: 930px;
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow: auto;
+  }
+
+  #contenedor_medico{
+    max-height: 250px;
+    max-width: 350px;
+    position: absolute;
+    top: 190px;
+    left: 930px;
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow: auto;
+  }
+
+  #contenedor_toro{
+    max-height: 250px;
+    max-width: 350px;
+    position: absolute;
+    top: 190px;
+    left: 930px;
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow: auto;
+  }
+
+  #contenedor_apoyo{
+    max-height: 250px;
+    max-width: 350px;
+    position: absolute;
+    top: 190px;
+    left: 930px;
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow: auto;
+  }
+
+  #contenedor_centro{
+    max-height: 250px;
+    max-width: 350px;
+    position: absolute;
+    top: 190px;
+    left: 930px;
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow: auto;
+  }
+
+  #contenedor_contaduria{
+    max-height: 250px;
+    max-width: 350px;
+    position: absolute;
+    top: 190px;
+    left: 930px;
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow: auto;
+  }
+  #contenedor_energias{
+    max-height: 250px;
+    max-width: 350px;
+    position: absolute;
+    top: 190px;
+    left: 930px;
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow: auto;
+  }
+  #contenedor_innovacion{
+    max-height: 250px;
+    max-width: 350px;
+    position: absolute;
+    top: 190px;
+    left: 930px;
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow: auto;
+  }
+  #contenedor_mecatronica{
+    max-height: 250px;
+    max-width: 350px;
+    position: absolute;
+    top: 190px;
+    left: 930px;
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow: auto;
+  }
+
+  #contenedor_mercadotecnia{
+    max-height: 250px;
+    max-width: 350px;
+    position: absolute;
+    top: 190px;
+    left: 930px;
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    display: none;
+    overflow: auto;
+  }
+#contenedor_mantenimiento{
+  max-height: 250px;
+  max-width: 350px;
+  position: absolute;
+  top: 190px;
+  left: 930px;
+  background-color: rgba(255, 255, 255, 1.0);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  display: none;
+  overflow: auto;
+}
+
+ #contenedor_nanotecnologia{
+  max-height: 250px;
+  max-width: 350px;
+  position: absolute;
+  top: 190px;
+  left: 930px;
+  background-color: rgba(255, 255, 255, 1.0);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  display: none;
+  overflow: auto;
+ }
+ #contenedor_proteccion{
+  max-height: 250px;
+  max-width: 350px;
+  position: absolute;
+  top: 190px;
+  left: 930px;
+  background-color: rgba(255, 255, 255, 1.0);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  display: none;
+  overflow: auto;
+ }
+
+ #contenedor_procesos{
+  max-height: 250px;
+  max-width: 350px;
+  position: absolute;
+  top: 190px;
+  left: 930px;
+  background-color: rgba(255, 255, 255, 1.0);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  display: none;
+  overflow: auto;
+ }
+ #contenedor_terapia{
+  max-height: 250px;
+  max-width: 350px;
+  position: absolute;
+  top: 190px;
+  left: 930px;
+  background-color: rgba(255, 255, 255, 1.0);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  display: none;
+  overflow: auto;
+ }
+
+ #contenedor_tecnologias{
+  max-height: 250px;
+  max-width: 350px;
+  position: absolute;
+  top: 190px;
+  left: 930px;
+  background-color: rgba(255, 255, 255, 1.0);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  display: none;
+  overflow: auto;
+ }
+/*--------------------------------------------------------*/
+
+/*CONTENEDORES DE PROFESORES*/
+#contenedor_trejo{
+  max-height: 250px;
+  max-width: 340px;
+  position: absolute;
+  top: 190px;
+  left: 930px;
+  background-color: rgba(255, 255, 255, 1.0);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  display: none;
+  overflow: auto;
+}
+
+#contenedor_cristian{
+  max-height: 250px;
+  max-width: 340px;
+  position: absolute;
+  top: 190px;
+  left: 930px;
+  background-color: rgba(255, 255, 255, 1.0);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  display: none;
+  overflow: auto;
+}
+
+#contenedor_hector{
+  max-height: 230px;
+  max-width: 340px;
+  position: absolute;
+  top: 190px;
+  left: 930px;
+  background-color: rgba(255, 255, 255, 1.0);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  display: none;
+  overflow: auto;
+}
+
+#contenedor_rosa{
+  max-height: 230px;
+  max-width: 340px;
+  position: absolute;
+  top: 190px;
+  left: 930px;
+  background-color: rgba(255, 255, 255, 1.0);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  display: none;
+  overflow: auto;
+}
+
+#contenedor_lozoya{
+  max-height: 230px;
+  max-width: 340px;
+  position: absolute;
+  top: 190px;
+  left: 930px;
+  background-color: rgba(255, 255, 255, 1.0);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  display: none;
+  overflow: auto;
+}
+/*--------------------------*/
+/*Botones para cerrrar contenedores de profesores*/
+#cerrar_trejo{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#cerrar_cristian{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#cerrar_hector{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#cerrar_rosa{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#cerrar_lozoya{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+/*-----------------------------------------------*/
+
+/*Botones para cerrar los contenedores de los servicios*/
+  #cerrarContenedorBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  #cerrar_beca{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  #cerrar_biblioteca{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  #cerrar_servicios{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  #cerrar_medico{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  #cerrar_toro{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  #cerrar_apoyo{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  #cerrar_centro{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  /*BOTONES DE CERRAR DIRECCIONES DE CARRERA*/
+  #cerrar_contaduria{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #cerrar_energias{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #cerrar_innovacion{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #cerrar_mecatronica{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #cerrar_mercadotecnia{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #cerrar_mantenimiento{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #cerrar_nanotecnologia{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #cerrar_proteccion{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #cerrar_procesos{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #cerrar_terapia{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #cerrar_tecnologias{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  /*-------------------------------------------------------------*/
+
+  
+  /*DISENO DE BOTONES DEL SUBMENU*/
+#button{
+    background-color: rgb(255, 251, 251);
+    border: 2px solid transparent;
+}
+/*----------------------------------*/
+
+.custom-label {
+    background-color: rgba(0,0,0 , 1.1);
+    color: #f02222; /* Color del texto */
+    padding: 0px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transform: translateX(40px);
+    text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+  }
+
+  .cafeteria-label{
+    background-color: rgba(0,0,0 , 1.1);
+    color: #f02222; /* Color del texto */
+    padding: 0px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transform: translateX(-30px);
+    margin-top: 30px;
+    text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+  }
+
+  .comida{
+    background-color: rgba(0,0,0 , 1.1);
+    color: #f02222; /* Color del texto */
+    padding: 0px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transform: translateX(70px);
+    text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+  }
+
+  .custom-edificioN{
+    background-color: rgba(0,0,0 , 1.1);
+    color: #f02222; /* Color del texto */
+    padding: 0px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transform: translateX(-43px);
+    text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
+  }
+  /*
+  .gm-style-iw{
+    max-width: 500px;
+    max-height: 300px;
+  }*/
+
+  .Edificio_J{
+    max-width: 250px;
+    max-height: 200px;
+  }
+  .Edificio_J img{
+    max-width: 210px;
+    height: 100px;
+  }
+/*
+  .gm-style-iw img {
+    max-width: 210px;
+    height: 100px;
+  }*/
+
+  .edificio_I img{
+    width: 200px;
+    height: 110px;
+  }
+
+  .edificio_I{
+    max-width: 250px;
+    max-height: 200px;
+  }
+
+  .edificio_H img{
+    width: 210px;
+    height: 110px;
+  }
+  .edificio_H{
+    max-width: 250px;
+    max-height: 200px;
+  }
+  
+.edificio_O img{
+    width: 210px;
+    height: 110px;
+}
+
+.edificio_O p{
+  font-size: 15px;
+color: #000;
+}
+.edificio_O{
+  max-width: 250px;
+  max-height: 200px;
+}
+
+
+.edificio_N img{
+    width: 210px;
+    height: 110px;
+}
+
+.edificio_N{
+  max-width: 210px;
+  max-height: 200px;
+}
+
+
+.edificio_L img{
+    width: 210px;
+    height: 110px;
+}
+
+.edificio_L{
+  max-width: 210px;
+  max-height: 200px;
+}
+
+.edificio_K img{
+    width: 210px;
+    height: 110px;
+}
+
+.edificio_K{
+  max-width: 210px;
+  max-height: 200px;
+}
+
+.edificio_F img{
+  width: 210px;
+  height: 110px;
+}
+
+.edificio_F{
+  max-width: 210px;
+  max-height: 200px;
+}
+
+.edificio_A img{
+  width: 210px;
+  height: 110px;
+}
+
+.edificio_A{
+  max-width: 210px;
+  max-height: 200px;
+}
+
+.edificio_C img{
+  width: 210px;
+  height: 110px;
+}
+.edificio_C{
+  max-width: 210px;
+  max-height: 200px;
+}
+
+.edificio_D img{
+  width: 210px;
+  height: 110px;
+}
+
+.edificio_D{
+  max-width: 210px;
+  max-height: 200px;
+}
+
+.edificio_E img{
+  width: 210px;
+  height: 110px;
+}
+
+
+.edificio_Q img{
+  width: 210px;
+  height: 110px;
+}
+
+.edificio_G img{
+  width: 210px;
+  height: 110px;
+}
+
+.edificio_G{
+  max-width: 210px;
+  max-height: 200px;
+}
+
+.edificio_B img{
+  width: 210px;
+  height: 110px;
+}
+
+.edificio_B{
+  max-width: 210px;
+  max-height: 200px;
+}
+
+.edificio_M img{
+  width: 210px;
+  height: 110px;
+}
+
+.edificio_M{
+  max-width: 210px;
+  max-height: 200px;
+}
+
+.gimnasio img{
+  width: 210px;
+  height: 110px;
+}
+
+.gimnasio{
+  max-width: 210px;
+  max-height: 200px;
+}
+
+.contenido li{
+  font-size: 14px;
+  font-weight: bold;
+}
+.contenido h2{
+  color: #13118d;
+}
+
+.contenidoh li{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.contenidoh h2{
+  color: #13118d;
+}
